@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="capacidad.css">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+    
+<div class="contenedor-principal">
+    
+    <div class="padre">
+        <h1>
+            estudio crediticio
+        </h1>
+
+<form action="" class="formulario">
+<label for="salario">ganancias mensuales</label>
+<input type="number" placeholder="escribe tu salario mensual" id="salario">
+<label for="gastosfijos">gastos mensuales</label>
+<input type="number" placeholder="escribe tus gastos fijos mensuales" id="gastosfijos">
+<button type="button" id="boton">calcular</button>
+</form>
+    </div>
+    </div>
+
+
+
+    <script >
+
+const boton = document.getElementById("boton");
+
+boton.addEventListener('click',() =>{
+const ingresostotales = document.getElementById("salario");
+const valordeingresos =parseInt (ingresostotales.value);
+const gastosfijos = document.getElementById("gastosfijos");
+const valordegastos =parseInt (gastosfijos.value);
+    
+// formula
+const parte1 = valordeingresos - valordegastos;
+const parte2 = parte1 * 0.35;
+alert(`tu cuota maxima mensual es de ${parte2} pesos`);
+});
+
+    </script>
+</body>
+</html>
